@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style2.css">
+    <title>JOB HUNTERS|Search Result</title>
+  </head>
+  <body>
+    <div class="header">
+      <a href="/">
+        <img id="logo2" src="../static/images/logo_white2_.png" </div>
+      </a>
+      <form method="get" action="/searchresult">
+        <div class="searchwrap">
+          <input id="typearea" type="text" name="keyword" placeholder="Search remote jobs here">
+          <button>
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <div class="btnwrap">
+          <label for="so">
+              <input id="so" type="checkbox" name="website1" value="stackoverflow" style="display:none;">
+              <img id="so" class="website-logo" src="../static/images/so_logo.png" title="StackOverflow">
+          </label>
+          <label for="remoteok">
+              <input id="remoteok" type="checkbox" name="website2" value="remoteok" style="display:none;">
+              <img id=" remoteok" class="website-logo" src="../static/images/remoteok_logo.png" title="RemoteOK">
+          </label>
+          <label for="wwr">
+              <input id="wwr" type="checkbox" name="website3" value="weworkremotely" style="display:none;">
+              <img id=" wwr" class="website-logo" src="../static/images/wwr_logo.png" title="WeWorkRemotely">
+          </label>
+      </div>
+      </form>
+      <a id="export" href="/export?keyword={{searchingBy}}&website1={{so}}&website2={{remoteok}}&website3={{wwr}}">Export to CSV</a>
+    </div>
+    <table>
+      <div class="result-info">
+        <h1>Search Results</h1>
+        <h3>Found {{resultsNumber}} results for: {{searchingBy}}</h3>
+    </div>
+      <thdead>
+        <tr>
+        <th><h4>From</h4></th>
+        <th><h4>Title</h4></th>
+        <th><h4>Company</h4></th>
+        <th><h4>Location</h4></th>
+        <th><h4>Link</h4></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for website in jobs %}
+          {% for job in website %}
+          <tr>
+          <td>{{job.from}}</td>
+          <td>{{job.title}}</td>
+          <td>{{job.company}}</td>
+          <td>{{job.location}}</td>
+          <td>
+            <a href="{{job.link}}" target="_blank">See more</a>
+          </td>
+          </tr>
+          {% endfor %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

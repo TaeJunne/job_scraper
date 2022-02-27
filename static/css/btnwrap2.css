@@ -1,0 +1,28 @@
+.btnwrap {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+.btnwrap label {
+    width: 125px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type=checkbox]:checked + .website-logo {
+    border: 4px solid tomato
+}
+.website-logo {
+    background-color: white;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.website-logo:last-child {
+    width: 120px;
+    height: 70px;
+}

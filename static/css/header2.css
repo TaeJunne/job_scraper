@@ -1,0 +1,30 @@
+.header {
+  margin: 10px 0px 50px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header * {
+  margin: 10px;
+}
+#logo2 {
+  height: 70px;
+  width: 200px;
+  object-fit: contain;
+}
+#export {
+  display: inline-block;
+  text-decoration: none;
+  height: 40px;
+  width: 130px;
+  font-weight: 700;
+  font-size: 100%;
+  border-radius: 18px;
+  color: tomato;
+  background-color: white;
+  text-align: center;
+  padding-top: 10px;
+  box-sizing: border-box;
+  box-shadow: inset -1px -1px 5px rgba(120, 0, 250, 0.5);
+}
+

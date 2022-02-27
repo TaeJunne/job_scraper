@@ -1,0 +1,40 @@
+@import "table.css";
+@import "searchwrap2.css";
+@import "header2.css";
+@Import "btnwrap2.css";
+
+body {
+  font-family: consolas, sans-serif;
+  background-color: rgb(120, 0, 250);
+  padding: 40px;
+}
+
+section {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(5, 1fr);
+}
+h1 {
+  font-size: 25px;
+  font-weight: 700;
+  color: tomato;
+  margin-bottom: 5px;
+}
+.opps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.opps span:first-child {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.opps span:last-child {
+  font-size: 30px;
+  font-weight: 700;
+}
+.header > form {
+  margin-top: 50px;
+}

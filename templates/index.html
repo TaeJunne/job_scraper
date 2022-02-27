@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>JOB HUNTERS</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- logo ref: https://www.123rf.com/photo_107114567_stock-vector-detective-logo-design-illustration.html -->
+        <!-- loco ref: https://www.vecteezy.com/free-vector/nature Nature Vectors by Vecteezy-->
+        <img id="logo" src="../static/images/logo_white.png">
+        <form method="get" action="/searchresult">
+            <div class="searchwrap">
+                <input id="typearea" type="text" name="keyword" placeholder="Search remote jobs here">
+                <button>
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <span>Select one to three websites.<br>(Default: Search in all three websites)</span>
+            <div class="btnwrap">
+                <label for="so">
+                    <input id="so" type="checkbox" name="website1" value="stackoverflow" style="display:none;">
+                    <img id="so" class="website-logo" src="../static/images/so_logo.png" title="StackOverflow">
+                </label>
+                <label for="remoteok">
+                    <input id="remoteok" type="checkbox" name="website2" value="remoteok" style="display:none;">
+                    <img id=" remoteok" class="website-logo" src="../static/images/remoteok_logo.png" title="RemoteOK">
+                </label>
+                <label for="wwr">
+                    <input id="wwr" type="checkbox" name="website3" value="weworkremotely" style="display:none;">
+                    <img id=" wwr" class="website-logo" src="../static/images/wwr_logo.png" title="WeWorkRemotely">
+                </label>
+            </div>
+        </form>
+        <div class="quicksearch">
+            <span>Quick Search</span>
+            <form class="quicksearch-list" method="get" action="/searchresult">
+                <label for="python">
+                    <button id="python" name="keyword" value="python">
+                        <img src="../static/images/python.png" title="python">
+                    </button>
+                    <span id="python">PYTHON</span>
+                </label>
+                <label for="java">
+                    <button id="java" name="keyword" value="java">
+                        <img src="../static/images/java.jpg" title="java">
+                    </button>
+                    <span id="java">JAVA</span>
+                </label>
+                <label for="javascript" title="javascript">
+                    <button id="javascript" name="keyword" value="javsscript">
+                        <img src="../static/images/javascript.png">
+                    </button>
+                    <span id="javascript">JAVASCRIPT</span>
+                </label>
+                <label for="react">
+                    <button id="react" name="keyword" value="react">
+                        <img src="../static/images/react.png" title="react">
+                    </button>
+                    <span id="react">REACT</span>
+                </label>
+                <label for="go">
+                    <button id="go" name="keyword" value="go">
+                        <img src="../static/images/go.png">
+                    </button>
+                    <span id="go">GO Lang</span>
+                </label>
+                <label for="swift">
+                    <button id="swift" name="keyword" value="swift">
+                        <img src="../static/images/swift.png" title="swift">
+                    </button>
+                    <span id="swift">SWIFT</span>
+                </label>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
