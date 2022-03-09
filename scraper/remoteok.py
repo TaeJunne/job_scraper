@@ -43,6 +43,6 @@ def push_requests(url):
 
 
 def get_jobs(word):
-    url = f"https://remoteok.com/remote-dev+python-jobs"
+    url = f"https://remoteok.com/remote-dev+{word}-jobs"
     jobs = push_requests(url)
     return jobs

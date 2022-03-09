@@ -8,12 +8,6 @@ body {
   background-color: rgb(120, 0, 250);
   padding: 40px;
 }
-
-section {
-  display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(5, 1fr);
-}
 h1 {
   font-size: 25px;
   font-weight: 700;

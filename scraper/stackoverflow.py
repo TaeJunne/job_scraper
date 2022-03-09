@@ -36,9 +36,9 @@ def push_requests(url, jobCount):
             r = requests.get(
                 f"{url}&pg={i + 1}", headers=headers)
             soup = BeautifulSoup(r.text, "html.parser")
-            if soup.select_one("#content > div.js-search-container.search-container.mbn24 > div > div.flex--item.fl1.br.bc-black-2 > div > div.listResults > div.bb.bc-black-2.fc-black-500"):
-                results = soup.select_one(
-                    "#content > div.js-search-container.search-container.mbn24 > div > div.flex--item.fl1.br.bc-black-2 > div > div.listResults > div.bb.bc-black-2.fc-black-500").previous_siblings
+            ad = soup.select_one("#content > div.js-search-container.search-container.mbn24 > div > div.flex--item.fl1.br.bc-black-2 > div > div.listResults > div.bb.bc-black-2.fc-black-500")
+            if ad:
+                results = ad.previous_siblings
             else:
                 results = soup.select(
                     "#content > div.js-search-container.search-container.mbn24 > div > div.flex--item.fl1.br.bc-black-2 > div > div.listResults div.d-flex")
